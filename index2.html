@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos Favoritas</title>
+    <link rel="stylesheet" href="te_amo3.css">
+    <style>
+        /* El iframe ocupa todo el espacio sin scrollbar visible */
+        .marco-principal {
+            height: calc(100vh - 120px);
+            min-height: unset;
+        }
+    </style>
+</head>
+<body>
+    <aside class="menu-lateral">
+        <h2>📸 Fotos</h2>
+        <ul class="Fotos">
+            <li>
+                <button class="boton-menu" data-page="fotosjuntos.html" data-title="Fotos Juntos">
+                    🫶 Fotos Juntos
+                </button>
+            </li>
+            <li>
+                <button class="boton-menu activo" data-page="fotosfavoritas.html" data-title="Fotos Favoritas">
+                    💕 Fotos Favoritas
+                </button>
+            </li>
+        </ul>
+    </aside>
+
+    <main class="Fotos-favoritas">
+        <h2 id="tituloContenido">Fotos Favoritas</h2>
+        <iframe
+            id="marcoPrincipal"
+            class="marco-principal"
+            src="fotosfavoritas.html"
+            title="Fotos favoritas"
+            scrolling="no">
+        </iframe>
+    </main>
+
+    <script src="fotos.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis fotos favoritas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html, body {
+            background: #0d0010;
+            overflow-x: hidden;
+            height: 100%;
+        }
+
+        .contenedor {
+            height: 100vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 20px;
+        }
+
+        .titulo-galeria {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: #fbb6ce;
+            text-align: center;
+            font-size: 18px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(244,114,182,0.5);
+        }
+        .titulo-galeria::before,
+        .titulo-galeria::after {
+            content: ' ✦ ';
+            color: rgba(244,114,182,0.4);
+        }
+
+        .galeria {
+            columns: 3 180px;   /* 3 columnas mínimo 180px */
+            column-gap: 12px;
+        }
+
+        .galeria img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            break-inside: avoid;
+        }
+
+        .galeria img:hover {
+            transform: scale(1.04) translateY(-3px);
+            box-shadow: 0 8px 32px rgba(244,114,182,0.35);
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <p class="titulo-galeria">Mis fotos favoritas de ti</p>
+        <div class="galeria">
+            <img src="https://i.imgur.com/sGfAbqQ.jpeg">
+            <img src="https://i.imgur.com/LOok7Ao.jpeg">
+            <img src="https://i.imgur.com/1Ley8yD.jpeg">
+            <img src="https://i.imgur.com/BhN5Dbk.jpeg">
+            <img src="https://i.imgur.com/dsEATMz.jpeg">
+            <img src="https://i.imgur.com/ZSXXvhq.jpeg">
+            <img src="https://i.imgur.com/g9gZ5TM.jpeg">
+            <img src="https://i.imgur.com/NdPOJXV.jpeg">
+            <img src="https://i.imgur.com/m8H7DWB.jpeg">
+            <img src="https://i.imgur.com/dne6CSi.jpeg">
+            <img src="https://i.imgur.com/zNPrDuY.jpeg">
+            <img src="https://i.imgur.com/kIwwE2g.jpeg">
+            <img src="https://i.imgur.com/J2xq6uh.jpeg">
+            <img src="https://i.imgur.com/KTAIrvU.jpeg">
+            <img src="https://i.imgur.com/dm0i5Tz.jpeg">
+            <img src="https://i.imgur.com/SEodtXW.jpeg">
+            <img src="https://i.imgur.com/Zr75Svc.jpeg">
+            <img src="https://i.imgur.com/FL8Jo0y.jpeg">
+            <img src="https://i.imgur.com/fkVZcEv.jpeg">
+            <img src="https://i.imgur.com/cCLpuek.jpeg">
+            <img src="https://i.imgur.com/GdXFHMF.jpeg">
+            <img src="https://i.imgur.com/QoP5AH9.jpeg">
+            <img src="https://i.imgur.com/yhxnCwl.jpeg">
+            <img src="https://i.imgur.com/9cFNoYC.jpeg">
+            <img src="https://i.imgur.com/U2qClzS.jpeg">
+            <img src="https://i.imgur.com/M5H1OcM.jpeg">
+            <img src="https://i.imgur.com/SzuN7ek.jpeg">
+            <img src="https://i.imgur.com/or7yFSU.jpeg">
+            <img src="https://i.imgur.com/JI11kKG.jpeg">
+            <img src="https://i.imgur.com/EGScEzB.jpeg">
+            <img src="https://i.imgur.com/KjnttOm.jpeg">
+            <img src="https://i.imgur.com/hVWH5Gp.jpeg">
+            <img src="https://i.imgur.com/LhTTPtD.jpeg">
+            <img src="https://i.imgur.com/CPYYXAJ.jpeg">
+            <img src="https://i.imgur.com/Gf0vKb8.jpeg">
+            <img src="https://i.imgur.com/SaNahcw.jpeg">
+            <img src="https://i.imgur.com/xWvP82t.jpeg">
+            <img src="https://i.imgur.com/4xYem5k.jpeg">
+            <img src="https://i.imgur.com/UJ5vRd8.jpeg">
+            <img src="https://i.imgur.com/W1v7wh2.jpeg">
+            <img src="https://i.imgur.com/8ySMYYR.jpeg">
+            <img src="https://i.imgur.com/JdskQ4J.jpeg">
+        </div>
+    </div>
+</body>
+</html>

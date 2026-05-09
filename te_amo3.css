@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Nunito:wght@300;400;600&display=swap');
+
+:root {
+  --rosa:       #f472b6;
+  --rosa-suave: #fbb6ce;
+  --morado:     #7c3aed;
+  --morado-osc: #3b0764;
+  --fondo:      #0d0010;
+  --borde:      rgba(244, 114, 182, 0.2);
+  --texto:      #f0d6f5;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--fondo);
+  background-image:
+    radial-gradient(ellipse 60% 50% at 10% 30%, rgba(124,58,237,0.3) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 85% 70%, rgba(244,114,182,0.18) 0%, transparent 55%);
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas: "lateral contenido";
+  color: var(--texto);
+}
+
+/* ── MENÚ LATERAL ── */
+.menu-lateral {
+  grid-area: lateral;
+  background: rgba(15, 0, 25, 0.85);
+  border-right: 1px solid var(--borde);
+  padding: 32px 16px;
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 100vh;
+}
+
+.menu-lateral h2 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: var(--rosa-suave);
+  font-size: 18px;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--borde);
+  text-shadow: 0 0 15px rgba(244,114,182,0.4);
+  text-align: center;
+}
+
+.Fotos {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+}
+
+.boton-menu {
+  width: 100%;
+  background: rgba(124,58,237,0.08);
+  color: rgba(251,182,206,0.7);
+  border: 1px solid rgba(244,114,182,0.15);
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.25s ease;
+  letter-spacing: 0.3px;
+}
+
+.boton-menu:hover,
+.boton-menu.activo {
+  background: rgba(124,58,237,0.25);
+  border-color: rgba(244,114,182,0.4);
+  color: #fff;
+  transform: translateX(4px);
+  box-shadow: 0 4px 16px rgba(124,58,237,0.3);
+}
+
+/* ── CONTENIDO PRINCIPAL ── */
+.Fotos-favoritas {
+  grid-area: contenido;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 28px 28px;
+  background: transparent;
+  min-height: 100vh;
+}
+
+.Fotos-favoritas h2 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: var(--rosa);
+  font-size: clamp(22px, 4vw, 32px);
+  margin-bottom: 20px;
+  text-shadow: 0 0 20px rgba(244,114,182,0.4);
+  letter-spacing: 1px;
+}
+
+.Fotos-favoritas h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--rosa), transparent);
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.marco-principal {
+  width: 100%;
+  flex: 1;
+  min-height: 500px;
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  background: rgba(10,0,20,0.6);
+  display: block;
+  box-shadow:
+    0 0 0 1px rgba(124,58,237,0.15),
+    0 12px 40px rgba(0,0,0,0.5);
+}
+
+/* ── PÁGINA INTERNA (fotosfavoritas.html) ── */
+.pagina-interna {
+  margin: 0;
+  background: transparent;
+  color: var(--texto);
+  padding: 16px;
+}
+
+.tarjeta-contenido {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.tarjeta-contenido header {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--rosa-suave);
+  text-align: center;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px rgba(244,114,182,0.5);
+}
+
+.etiqueta {
+  display: inline-block;
+  background: rgba(124,58,237,0.25);
+  color: var(--rosa);
+  border: 1px solid rgba(244,114,182,0.3);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.tarjeta-contenido img {
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-contenido img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 32px rgba(244,114,182,0.3);
+}
